@@ -1,0 +1,110 @@
+<!--<html>
+<head>
+    <title>HospitalRegistration</title>
+</head>
+
+<body>
+    <form action="" method="POST">
+        {% csrf_token %} 
+        <table>
+            {{ form.as_table}}
+        </table>
+
+        <tr>
+            <td colspan="2"> <button type="submit">submit</button> </td>
+        
+        </tr>
+    </form>
+
+</body>-->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registerme</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body style='background-color: red ;'>
+    <div class="container">
+        <!-- Content here -->
+        <h1>Register From</h1>
+        <hr><br></br>{{ flag }}
+
+        <form action='' method='post'>
+            {% csrf_token %}
+            <!--Full Name-->
+
+
+
+            <div class="mb-3 row">
+                {{ form.hospital_name.errors }}
+                <label for="{{ form.hospital_name.id_for_label }}" class="col-sm-2 col-form-label">Hospital Name : </label>
+                <div class="col-sm-10">
+                    {{ form.hospital_name }}
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                {{ form.hospital_contact.errors }}
+                <label for="{{ form.hospital_contact.id_for_label }}" class="col-sm-2 col-form-label">Hospital Contact : </label>
+                <div class="col-sm-10">
+                    {{ form.hospital_contact }}
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                {{ form.hospital_address.errors }}
+                <label for="{{ form.hospital_address.id_for_label }}" class="col-sm-2 col-form-label">Hospital Address : </label>
+                <div class="col-sm-10">
+                    {{ form.hospital_address }}
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                {{ form.hospital_emailid.errors }}
+                <label for="{{ form.hospital_emailid.id_for_label }}" class="col-sm-2 col-form-label">Hospital Email ID : </label>
+                <div class="col-sm-10">
+                    {{ form.hospital_emailid }}
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                {{ form.hospital_specialization.errors }}
+                <label for="{{ form.hospital_specialization.id_for_label }}" class="col-sm-2 col-form-label">Hospital Specialization : </label>
+                <div class="col-sm-10">
+                    {{ form.hospital_specialization }}
+                </div>
+            </div>
+
+
+            
+            <!-- Submit Button -->
+
+            <div class="mb-3 row">
+                <label for="submitbutton" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary mb-3">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+</html>

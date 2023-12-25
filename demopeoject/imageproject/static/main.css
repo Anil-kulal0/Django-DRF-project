@@ -1,0 +1,21 @@
+body{
+    background-color: aqua;
+}
+.header{
+    border-color: rgb(212, 26, 76);
+    border-width: 5px;
+    border-style: double;
+    width: 100% ;
+}
+.footer{
+    border-color: rgb(219, 176, 33);
+    border-width: 5px;
+    border-style: double;
+}
+.saidpanel{
+    background-color: azure;
+
+}
+.maincontent{
+    background-color: blue;
+}

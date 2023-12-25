@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RegisterMe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+</head>
+
+<body style="background-color: rgb(209, 247, 244);">
+    <div class="container">
+        <!-- Content here -->
+        <h1>Registration Form</h1>
+        <hr /><br><br> {{ flag }}
+        <form action="/edituser/{{ data.id }}" method="post">
+            {% csrf_token %}
+            <!-- FULL NAME -->
+            <div class="mb-3 row">
+                <label for="fullname" class="col-sm-2 col-form-label">Full Name :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="fullname" id="fullname" value="{{ data.fullname }}">
+                </div>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="mb-3 row">
+                <label for="email" class="col-sm-2 col-form-label">EMAIL ID :</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" name="email" id="email" value="{{ data.emailid }}">
+                </div>
+            </div>
+
+            <!-- contact -->
+            <div class="mb-3 row">
+                <label for="email" class="col-sm-2 col-form-label">Contact Number :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="contact" id="contact" value="{{ data.contact }}">
+                </div>
+            </div>
+
+            <!-- address -->
+            <div class="mb-3 row">
+                <label for="address" class="col-sm-2 col-form-label">Address :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="address" id="address" value="{{ data.address }}">
+                </div>
+            </div>
+
+            <!-- USername -->
+            <div class="mb-3 row">
+                <label for="username" class="col-sm-2 col-form-label">Username :</label>
+                <div class="col-sm-10">
+                    <input type="username" class="form-control" name="username" id="username" value="{{ data.username }}" disabled>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+
+            <div class="mb-3 row">
+                <label for="submitbutton" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary mb-3">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>

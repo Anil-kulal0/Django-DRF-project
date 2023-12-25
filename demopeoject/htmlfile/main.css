@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(220, 244, 87);
+
+}
+.header{
+    border: red;
+    border-width: 5px;
+    border-style: dotted;
+    width: 100%;
+}
+
+.footer {
+    border: red;
+    border-width: 5px;
+    border-style: dotted;
+
+
+}
+.sidepanel{
+    background: pink;
+    width: 10%;
+}
+.maincontent{
+    background: yellow;
+    width: 90;
+}

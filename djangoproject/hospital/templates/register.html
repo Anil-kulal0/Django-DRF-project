@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body style="background-color: rgb(209, 247, 244);">
+    <form action="registerdocter/" method="post">
+        {% csrf_token %}
+        <div>
+            {{ form }}
+        </div>
+
+        <button type="submit"> submit </button>
+    </form>
+    
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <label for="docter_name">Docter Name</label>
+<input id="docter_name" type="docter_name" maxlength="100" required> -->

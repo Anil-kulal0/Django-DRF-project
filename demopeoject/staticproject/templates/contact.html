@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title%} {{pagetitle}} {% endblock title %}{%block content%}
+{{content}} {%endblock %}
+ 
+<table>
+    <tr>
+        <th> Sr.NO</th>
+        <th>Name</th>
+        <th>Contact</th>
+    </tr>
+    
+    {% for ele in contact %}
+    <tr>
+        {% for val in ele %}
+        <td> {{val}} </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
